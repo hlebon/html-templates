@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Article</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="_global.css" />
+  </head>
+  <style>
+    section {
+      width: 90%;
+      margin: 2rem auto auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .article {
+      display: flex;
+      flex-flow: column wrap;
+      background-color: #ffffff;
+      box-shadow: 1px 2px 7px #c3c3c3;
+    }
+
+    .article_content {
+      padding: 1rem;
+    }
+
+    .article_content_title {
+      font-size: 32px;
+      font-family: "Playfair Display", serif;
+    }
+
+    .article_content_footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <body>
+    <section>
+      <article class="article">
+        <div class="article_img_container">
+          <img
+            src="https://images.unsplash.com/photo-1529397938791-2aba4681454f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+        </div>
+        <div class="article_content">
+          <div>25 de enero, 2019</div>
+          <h3 class="article_content_title">
+            Finanzas personales para parejas
+          </h3>
+          <p class="article_content_extract">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Repellendus reiciendis accusantium earum laboriosam optio, quas
+            labore asperiores, ullam veniam, dolores fugiat inventore.
+          </p>
+          <footer class="article_content_footer">
+            <div>Hans Garcia</div>
+            <a href="/">Seguir leyendo</a>
+          </footer>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
