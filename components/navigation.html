@@ -23,9 +23,6 @@
       flex-flow: row wrap;
       justify-content: space-between;
     }
-    a.nav_home {
-      margin: 0 12px;
-    }
 
     ul.nav_pages {
       display: flex;
@@ -55,6 +52,7 @@
     .nav a {
       color: #313131;
       font-size: 18px;
+      font-family: "Noto Serif SC", serif;
       font-weight: 600;
       text-align: center;
       text-decoration: none;
@@ -65,11 +63,17 @@
     a:hover {
       color: #000000;
     }
+
+    .nav a.nav_home {
+      margin: 0 12px;
+      font-family: "Lato", sans-serif;
+      color: orange;
+    }
   </style>
   <body>
     <nav class="nav">
       <div class="nav_container">
-        <a href="/" class="nav_home">Home</a>
+        <a href="/" class="nav_home">Claukishin</a>
         <ul class="nav_pages">
           <li class="nav_pages_item"><a href="/">About</a></li>
           <li class="nav_pages_item"><a href="/">Services</a></li>
