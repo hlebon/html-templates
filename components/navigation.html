@@ -8,34 +8,48 @@
     <link rel="stylesheet" type="text/css" href="global.css" />
   </head>
   <style>
-    nav.nav {
+    .nav {
       position: fixed;
       width: 100%;
       height: auto;
       font-size: 18px;
-      background-color: #ffffff;
+      background-color: gray;
       box-shadow: 0 3px 5px #f3f3f3;
     }
-    div.nav_container {
+    .nav_container {
       width: var(--width-layout);
       margin: auto;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-between;
+      background-color: aqua;
     }
 
-    ul.nav_pages {
+    .nav_container_home {
+      flex: 0 0 100%;
+      background-color: #f0ffff;
       display: flex;
+    }
+
+    .nav_container_pages {
+      flex: 0 0 100%;
+      background-color: burlywood;
+    }
+
+    .nav_pages_list {
+      width: 100%;
       list-style: none;
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
     }
 
-    li.nav_pages_item {
-      margin: 0 12px;
+    li.nav_pages_list_item {
+      margin: 0;
+      padding: 0 10px;
     }
 
-    li.nav_pages_item::after {
+    li.nav_pages_list_item::after {
       content: "";
       display: block;
       width: 0;
@@ -45,7 +59,7 @@
       transition: width 0.3s;
     }
 
-    li.nav_pages_item:hover::after {
+    li.nav_pages_list_item:hover::after {
       width: 100%;
       transition: width 0.3s;
     }
@@ -53,8 +67,7 @@
       color: #313131;
       font-size: 18px;
       font-family: "Noto Serif SC", serif;
-      font-weight: 600;
-      text-align: center;
+      font-weight: 400;
       text-decoration: none;
       padding: 1rem 0.5rem;
       display: block;
@@ -64,21 +77,44 @@
       color: #000000;
     }
 
-    .nav a.nav_home {
-      margin: 0 12px;
+    .nav a.link_home {
       font-family: "Lato", sans-serif;
       color: orange;
+    }
+
+    .nav_compount_title {
+      color: #9c27b0;
+    }
+
+    /* Mobile Landscape Screen Sizes */
+    @media only screen and (min-width: 480px) {
+      .nav_container_home {
+        flex-basis: 30%;
+      }
+      .nav_container_pages {
+        flex-basis: 70%;
+      }
+      .nav_pages_list {
+        justify-content: flex-end;
+      }
+    }
+    /* Desktop screen Sizes */
+    @media only screen and (min-width: 768px) {
     }
   </style>
   <body>
     <nav class="nav">
       <div class="nav_container">
-        <a href="/" class="nav_home">Claukishin</a>
-        <ul class="nav_pages">
-          <li class="nav_pages_item"><a href="/">About</a></li>
-          <li class="nav_pages_item"><a href="/">Services</a></li>
-          <li class="nav_pages_item"><a href="/">Contact</a></li>
-        </ul>
+        <div class="nav_container_home">
+          <a href="/" class="link_home"> Claukishin </a>
+        </div>
+        <div class="nav_container_pages">
+          <ul class="nav_pages_list">
+            <li class="nav_pages_list_item"><a href="/">About</a></li>
+            <li class="nav_pages_list_item"><a href="/">Services</a></li>
+            <li class="nav_pages_list_item"><a href="/">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
   </body>
