@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Navigation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="global.css" />
+  </head>
+  <style>
+    nav.nav {
+      position: fixed;
+      width: 100%;
+      height: auto;
+      font-size: 18px;
+      background-color: #ffffff;
+      box-shadow: 0 3px 5px #f3f3f3;
+    }
+    div.nav_container {
+      width: var(--width-layout);
+      margin: auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+    a.nav_home {
+      margin: 0 12px;
+    }
+
+    ul.nav_pages {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li.nav_pages_item {
+      margin: 0 12px;
+    }
+
+    li.nav_pages_item::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      margin: auto;
+      background: #9c27b0;
+      transition: width 0.3s;
+    }
+
+    li.nav_pages_item:hover::after {
+      width: 100%;
+      transition: width 0.3s;
+    }
+    .nav a {
+      color: #313131;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      padding: 1rem 0.5rem;
+      display: block;
+      /**/
+    }
+    a:hover {
+      color: #000000;
+    }
+  </style>
+  <body>
+    <nav class="nav">
+      <div class="nav_container">
+        <a href="/" class="nav_home">Home</a>
+        <ul class="nav_pages">
+          <li class="nav_pages_item"><a href="/">About</a></li>
+          <li class="nav_pages_item"><a href="/">Services</a></li>
+          <li class="nav_pages_item"><a href="/">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>
